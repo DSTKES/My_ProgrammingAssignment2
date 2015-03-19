@@ -14,7 +14,7 @@ makeCacheMatrix <- function(x = matrix()) {
                 inv_x <<- NULL  # sets cache value inv_x to null in parent environment           
         }
         get <- function() x
-        set_inv <- function(solve) inv_x <<- solve
+        set_inv <- function(solve) inv_x <<- solve # passes solve value to cache in parent environment
         get_inv <- function() inv_x
         list(set = set, get = get,
              set_inv = set_inv,
